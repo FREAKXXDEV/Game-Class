@@ -3,15 +3,22 @@
 Game::Game() 
 	: window(sf::VideoMode(840, 520), "The Game Class", sf::Style::Close) {
 	 
+	FPS = 60.0f;
 	// TODO: Inititalize Game Objects
 }
 
 void Game::run() {
 	sf::Clock clock;
+	sf::Time timeSinceLastUpdate = sf::Time::Zero;
+	sf::Time timePerFrame = sf::seconds(1.0f / FPS);
 
 	while (window.isOpen()) {
 		processEvents();
-		update(clock.restart());
+		timeSinceLastUpdate = clock.restart();
+		while (timeSinceLastUpdate > timePerFrame) {
+			timeSinceLastUpdate -= timePerFrame;
+			update(timePerFrame);
+		}
 		render();
 	}
 }
