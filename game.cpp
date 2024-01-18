@@ -3,7 +3,6 @@
 Game::Game() 
 	: window(sf::VideoMode(840, 520), "The Game Class", sf::Style::Close) {
 	 
-	FPS = 60.0f;
 	// TODO: Inititalize Game Objects
 }
 

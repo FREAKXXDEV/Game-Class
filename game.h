@@ -13,4 +13,5 @@ private:
 
 private:
 	sf::RenderWindow window;
+	float FPS{ 60.0f };
 };
