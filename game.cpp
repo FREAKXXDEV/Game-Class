@@ -41,8 +41,8 @@ void Game::update(sf::Time time) {
 }
 
 void Game::render() {
-	//TODO: Render Game Objects
-
 	window.clear();
+	
+	//TODO: Render Game Objects	
 	window.display();
 }
