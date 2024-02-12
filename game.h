@@ -4,7 +4,7 @@
 class Game {
 public:
 	Game();
-	void run();
+	void run(const float framesPerSecond);
 
 private:
 	void processEvents();
