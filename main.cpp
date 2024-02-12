@@ -2,5 +2,5 @@
 
 void main() {
 	Game game;
-	game.run(60.0f);
+	game.run(60.f);
 }
