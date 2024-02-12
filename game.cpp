@@ -8,16 +8,11 @@ Game::Game()
 
 void Game::run() {
 	sf::Clock clock;
-	sf::Time timeSinceLastUpdate = sf::Time::Zero;
-	sf::Time timePerFrame = sf::seconds(1.0f / FPS);
 
 	while (window.isOpen()) {
 		processEvents();
 		timeSinceLastUpdate = clock.restart();
-		while (timeSinceLastUpdate > timePerFrame) {
-			timeSinceLastUpdate -= timePerFrame;
-			update(timePerFrame);
-		}
+		update(clock.restart());
 		render();
 	}
 }
