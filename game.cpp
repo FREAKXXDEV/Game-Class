@@ -10,13 +10,11 @@ void Game::run(const float framesPerSecond) {
 	sf::Clock clock;
 	sf::Time timeSinceLastUpdate = sf::Time::Zero;
 	sf::Time TimePerFrame = sf::seconds(1.f / framesPerSecond);
-	while (window.isOpen())
-	{
+	while (window.isOpen())	{
 		processEvents();
 		bool canRender = false;
 		timeSinceLastUpdate += clock.restart();
-		while (timeSinceLastUpdate > TimePerFrame)
-		{
+		while (timeSinceLastUpdate > TimePerFrame) {
 			timeSinceLastUpdate -= TimePerFrame;
 			canRender = true;
 			update(TimePerFrame);
