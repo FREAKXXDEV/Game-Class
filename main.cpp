@@ -1,6 +1,8 @@
 #include "game.h"
 
-void main() {
+int main() {
 	Game game;
 	game.run(60.f);
+
+	return 0;
 }
